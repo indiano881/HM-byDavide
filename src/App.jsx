@@ -15,7 +15,7 @@ function App() {
     try {
       let response= await fetch(url);
       let data= await response.json();
-      console.log(data)
+      setProducts(data)
     } catch (err) {
       console.log("error is" + err)
     }
@@ -28,7 +28,7 @@ function App() {
 
 
 
-  }, [])
+  }, [products])
 
 
 
@@ -36,6 +36,9 @@ function App() {
     <>
       <Header />
       <Navigation />
+      <section className="main-container">
+      {products && products.map((item, index) => <Products key={index} props={item} />)}
+      </section>
       <Footer />
     </>
   )

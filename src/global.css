@@ -19,3 +19,17 @@ body {
     align-items: center;
     background-color: #FAF9F8;
 }
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+    }
+}
