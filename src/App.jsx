@@ -1,12 +1,15 @@
 import "./global.css"
-
-
+import Header from "./components/Header"
+import Navigation from "./components/Navigation"
+import Footer from "./components/Footer"
 function App() {
 
 
   return (
     <>
-      <h1>connected</h1>
+      <Header />
+      <Navigation />
+      <Footer />
     </>
   )
 }

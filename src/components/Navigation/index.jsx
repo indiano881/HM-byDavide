@@ -4,7 +4,7 @@ const Navigation = () => {
     return (
         <>
           <nav className={styles.navigation}>
-
+          
           </nav>
         </>
     )
