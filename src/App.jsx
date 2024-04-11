@@ -40,7 +40,7 @@ function App() {
       }
     }
     getCategories(API_URL+ "/categories")
-    
+
   },[])
 
   
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <Header />
-      
+      {category && <Navigation categoryArray={category}/>}
       <Footer />
     </>
   )

@@ -1,6 +1,6 @@
 import styles from './Navigation.module.css'
 
-const Navigation = ({ category, setCategory, setSelectedCategory}) => {
+const Navigation = ({ categoryArray}) => {
 
   const handleClickIconMenu = () => {
     console.log("Clicked")
@@ -19,7 +19,7 @@ const Navigation = ({ category, setCategory, setSelectedCategory}) => {
               <div class={styles.meat}></div>
               <div class={styles.bottom}></div>
             </label>
-          {/*category.map((item, index)=> <p onClick={()=>handleClickCategory(item)} key={index} className={styles.menuV} >{item}</p>)*/}
+          {categoryArray.map((item, index)=> <p onClick={()=>handleClickCategory(item)} key={index} className={styles.menuV} >{item}</p>)}
           </nav>
         </>
     )
