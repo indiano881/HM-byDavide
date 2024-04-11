@@ -1,13 +1,14 @@
 import styles from './Navigation.module.css'
 
-const Navigation = ({ categoryArray}) => {
+const Navigation = ({ categoryArray,setSelectedCategory, setProducts}) => {
 
   const handleClickIconMenu = () => {
     console.log("Clicked")
   }
 
   const handleClickCategory = (title) => {
-    setCategory(title)
+    setSelectedCategory(title)
+    setProducts(null)
     
   }
     return (
