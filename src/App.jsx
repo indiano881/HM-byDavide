@@ -49,6 +49,7 @@ function App() {
     <>
       <Header />
       {category && <Navigation categoryArray={category}/>}
+      {products && products.map((item, index)=> <Products key={index} props={item}/>)}
       <Footer />
     </>
   )
