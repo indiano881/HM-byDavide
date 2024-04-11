@@ -13,6 +13,35 @@ function App() {
 
   const API_URL= 'https://fakestoreapi.com/products';
 
+  useEffect(()=> {
+
+    const getProducts = async url => {
+      //at page load-display all products
+      try {
+        const response = await fetch(url);
+        const data= await response.json();
+        setProducts(data)
+        console.log(data)
+      } catch (err) {
+        console.log("error is:" + err)
+      }
+    }
+    getProducts(API_URL)
+
+    //at page load-display all CATEGORIES
+    const getCategories = async url => {
+      try {
+        const response = await fetch(url);
+        const data= await response.json();
+        setCategory(data)
+        console.log(data)
+      } catch (err) {
+        console.log("error is:" + err)
+      }
+    }
+    getCategories(API_URL+ "/categories")
+    
+  },[])
 
   
 
